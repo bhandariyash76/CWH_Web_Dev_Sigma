@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Sizing</title>
+    <style>
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        /* this is default */
+    }
+    .boxvh{
+        margin: auto;
+        /* viewport means according to the screen size */
+        width: 50vw; /* 50% of the viewport width */
+        height: 50vh; /* 50% of the viewport height */
+        background-color: lightcoral;
+    }
+    </style>
+</head>
+<body>
+    <div class="box">
+        this is a box
+    </div>
+    <div class="boxvh">
+        this is a viewport-sized box
+    </div>
+</body>
+</html>

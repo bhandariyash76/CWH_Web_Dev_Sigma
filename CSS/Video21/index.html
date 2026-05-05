@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css Specificity</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        ul {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .my-class {
+            color: green;
+        }
+        #my-id {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Specificity</h1>
+    <p>Specificity is a set of rules that browsers use to determine which CSS rule applies when there are multiple rules that could apply to the same element. It is based on the types of selectors used in the CSS rules.</p>
+
+    <h2>Specificity Hierarchy</h2>
+    <ul>
+        <li>Inline styles (e.g., style="color: red;") have the highest specificity.</li>
+        <li>ID selectors (e.g., #my-id) have a higher specificity than class selectors.</li>
+        <li>Class selectors (e.g., .my-class) have a higher specificity than element selectors.</li>
+        <li>Element selectors (e.g., div, p) have the lowest specificity.</li>
+    </ul>
+
+    <h2>Calculating Specificity</h2>
+    <p>Specificity is calculated based on the number of each type of selector in a rule. The formula is:</p>
+    <pre>
+    Specificity = (a, b, c, d)
+    where:
+    a = 1 if inline styles are present, otherwise 0
+    b = number of ID selectors
+    c = number of class selectors, attributes selectors, and pseudo-classes
+    d = number of element selectors and pseudo-elements
+    </pre>
+
+    <h2>Example</h2>
+    <p>Consider the following CSS rules:</p>
+    <pre>
+    /* Rule 1 */
+    p {
+        color: blue;
+    }
+
+    /* Rule 2 */
+    .my-class {
+        color: green;
+    }
+
+    /* Rule 3 */
+    #my-id {
+        color: red;
+    }
+    </pre>
+
+    <p>If we have an HTML element like this:</p>
+    <pre>
+    <p id="my-id" class="my-class">Hello World!</p>
+    </pre>
+
+    <p>The color of the text will be red because the ID selector (#my-id) has a higher specificity than the class selector (.my-class) and the element selector (p).</p>
+</body>
+</html>

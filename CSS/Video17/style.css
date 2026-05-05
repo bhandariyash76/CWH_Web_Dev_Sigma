@@ -1,0 +1,21 @@
+.red{
+    color: red;
+}
+#green{
+    color: green;
+}
+
+div > p{
+    color: blue;
+}
+
+a:visited{
+    color: purple;
+}
+a:hover{
+    color: rgb(196, 135, 23);
+}
+a:active
+{
+    color: yellow;
+}   
