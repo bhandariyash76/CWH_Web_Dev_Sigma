@@ -11,12 +11,29 @@
         background-color: lightblue;
         /* this is default */
     }
+    html {
+        font-size: 16px; /* this is the default font size for most browsers */
+    }
     .boxvh{
         margin: auto;
         /* viewport means according to the screen size */
         width: 50vw; /* 50% of the viewport width */
         height: 50vh; /* 50% of the viewport height */
         background-color: lightcoral;
+    }
+    .container{
+        font-size: 10px; /* this is the default font size for most browsers */
+    }
+    .container{
+        font-size: 2em; /* 2 times the font size of the parent element */
+    }
+    .containerrem{
+        font-size: 2rem; /* 2 times the font size of the root element (html) */
+    }
+    .vminvmax{
+        width: 50vmin; /* 50% of the smaller dimension of the viewport */
+        height: 50vmax; /* 50% of the larger dimension of the viewport */
+        background-color: lightgreen;
     }
     </style>
 </head>
@@ -26,6 +43,15 @@
     </div>
     <div class="boxvh">
         this is a viewport-sized box
+    </div>
+    <div class="container">
+        This is a container with font size 2em.
+    </div>
+    <div class="containerrem">
+        This is a container with font size 2rem.
+    </div>
+    <div class="vminvmax">
+        This is a box with size based on viewport dimensions.
     </div>
 </body>
 </html>
