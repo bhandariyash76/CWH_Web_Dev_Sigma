@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Overflow Property</title>
+    <style>
+        .box{
+            width: 40vw;
+            height: 40vh;
+            border: 2px solid black;
+            overflow: scroll;
+        }
+        .box1{
+            width: 40vw;
+            height: 40vh;
+            border: 2px solid black;
+            overflow: auto;
+            white-space: nowrap;
+            /* text-overflow: ellipsis; */
+        }
+        .box2{
+            width: 40vw;
+            height: 40vh;
+            border: 2px solid black;
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        i am good a boy 
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem sapiente tempore recusandae soluta, unde officia optio. Explicabo beatae, molestias et, sed in odio assumenda distinctio mollitia omnis dolor harum suscipit corporis. Non magni rem quam atque eveniet, esse pariatur ducimus iure iusto ipsum numquam libero!
+    </div>
+    <div class="box1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet quidem dolorum quo non, eligendi laboriosam! Nihil pariatur ullam debitis suscipit earum quo odio? Quod repellat magni, tempore dolor nobis mollitia officiis dicta porro fugiat. Laudantium vel minima ullam consequatur est eligendi sit deleniti suscipit culpa.
+    </div>
+</body>
+<div class="box2">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum exercitationem ducimus debitis nemo necessitatibus sapiente nihil dolor quos dolore illo! Blanditiis magni cupiditate culpa velit quos a iste, unde reprehenderit provident asperiores! Soluta quo quae dolores assumenda! Autem sapiente accusamus velit laborum, quae est quisquam?
+</div>
+</html>
