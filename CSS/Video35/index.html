@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More On Selectors</title>
+    <style>
+        .box:first-child{
+            background-color: red;
+        }
+        [data-color="primary"]{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <div class="boxes">
+        <div class="box">hey i am a div</div>
+        <div data-color = "primary" class="box">hey i am a div</div>
+        <div class="box">hey i am a div</div>
+    </div>
+</body>
+</html>
