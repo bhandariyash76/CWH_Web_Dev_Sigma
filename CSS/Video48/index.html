@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bounce and Animation</title>
+    <style>
+        .container {
+            height: 80vh;
+            width: 80vw;
+            background-color: blue;
+            position: relative;
+            overflow: hidden;
+        }
+        .ball {
+            height: 120px;
+            width: 120px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            /* Start at the bottom left corner */
+            bottom: 0;
+            left: 0;
+            /* Combined smooth physics animation */
+            animation: travelAndBounce 4s linear infinite;
+        }
+
+        @keyframes travelAndBounce {
+            0% {
+                bottom: 0;
+                left: 0;
+            }
+            /* First bounce peak */
+            25% {
+                bottom: 300px;
+                left: 25%;
+            }
+            /* First floor impact */
+            50% {
+                bottom: 0;
+                left: 50%;
+            }
+            /* Second bounce peak (lower height) */
+            75% {
+                bottom: 150px;
+                left: 75%;
+            }
+            /* End of container path */
+            100% {
+                bottom: 0;
+                left: calc(100% - 120px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+</body>
+</html>
